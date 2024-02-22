@@ -1,0 +1,46 @@
+'''l=[20,12,34,1,2,3,4,5,6,7,8,9,0]
+def test1(a):
+    n=[]
+    for i in a:
+        res=i**2
+        n.append(res)
+    return res
+print(test1(l))
+def test2(x):
+    return x**2
+print(list(map(test2 ,l)))
+print(list(map(lambda x :x+10 ,l)))
+print(list(map(lambda x: str(x),l)))
+
+l1=[1,2,3,4,5]
+l2=[6,7,8,9,0]
+print(list(map(lambda i,j:i+j,l1,l2)))
+
+
+str="vaishnavi tumbalam gutti"
+print(list(map(lambda x:x.upper(),str)))'''
+
+
+from functools import reduce
+l=[1,2,3,4 ,8,9]
+'''print(reduce(lambda x,y: x+y , l))
+
+# other way of writing it by defining the external function 
+def add(x,y):
+    return x+y
+print(reduce(add,l))
+# Exception case in reduce functions
+# print(reduce(lambda x,y: x+y , []))
+print(reduce(lambda x,y: x+y , [1]))
+print(reduce(lambda x,y: x*y , [1]))'''
+print(reduce(lambda x,y: x if x>y else y,l))
+
+print(list(filter(lambda x:x%2==0,l)))
+print(list(filter(lambda x:x%2!=0,l)))
+l1=[-1,2,3,4,-5,-6,-8]
+print(list(filter(lambda x:x<0,l1)))
+print(list(filter(lambda x:x >=0,l1)))
+
+l2=['vaish','mani','sreeja','jaya','chinna']
+print(list(filter(lambda x:len(x)>=5,l2)))
+print(list(filter(lambda x:len(x)<=4,l2)))
